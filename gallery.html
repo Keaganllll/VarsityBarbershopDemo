@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gallery • PLACEHOLDER BARBER LOUNGE</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery • Placeholder Barber Lounge</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
@@ -12,10 +12,10 @@
   <div class="container header-inner">
     <div class="brand">
       <div class="name">PLACEHOLDER BARBER LOUNGE</div>
-      <div class="sub">Luxury Cuts • City, State</div>
+      <div class="tag">Luxury Cuts • City, State</div>
     </div>
-    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">Menu</button>
-    <nav id="siteNav" aria-label="Primary">
+    <button class="menu-btn" id="menuBtn" type="button">☰ <span>Menu</span></button>
+    <nav id="nav">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="gallery.html">Gallery</a>
@@ -27,44 +27,42 @@
 </header>
 
 <main>
-  <section>
+  <section class="page-title">
     <div class="container">
-      <div class="kicker">Gallery</div>
-      <h1>Featured Work</h1>
-      <p class="small">Demo photos for layout — swap with real cuts later.</p>
+      <h1>Gallery</h1>
+      <p>Swap these demo images for real cuts (or add video later).</p>
+    </div>
+  </section>
 
-      <div class="grid-3" style="margin-top:16px;">
-        <div class="card"><img alt="Cut 1" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?auto=format&fit=crop&w=1400&q=80"></div>
-        <div class="card"><img alt="Cut 2" src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&w=1400&q=80"></div>
-        <div class="card"><img alt="Cut 3" src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=1400&q=80"></div>
-        <div class="card"><img alt="Cut 4" src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1400&q=80"></div>
-        <div class="card"><img alt="Cut 5" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=80"></div>
-        <div class="card"><img alt="Cut 6" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=80"></div>
-      </div>
-
-      <div style="margin-top:16px;">
-        <a class="btn primary" href="book.html">Book Your Slot</a>
+  <section class="section small">
+    <div class="container">
+      <div class="gallery">
+        <div class="img"><img src="assets/demo1.jpg" alt="Demo haircut 1"></div>
+        <div class="img"><img src="assets/demo2.jpg" alt="Demo haircut 2"></div>
+        <div class="img"><img src="assets/demo3.jpg" alt="Demo haircut 3"></div>
+        <div class="img"><img src="assets/demo4.jpg" alt="Demo haircut 4"></div>
+        <div class="img"><img src="assets/demo5.jpg" alt="Demo haircut 5"></div>
+        <div class="img"><img src="assets/demo6.jpg" alt="Demo haircut 6"></div>
       </div>
     </div>
   </section>
 </main>
 
-<!-- MAP MODAL -->
-<div class="modal-backdrop" id="mapModalBackdrop" onclick="if(event.target.id==='mapModalBackdrop') closeDirections()">
-  <div class="modal" role="dialog" aria-modal="true" aria-label="Open directions">
-    <div class="kicker">Directions</div>
-    <h3>Open in Maps</h3>
-    <div class="small">Choose your preferred maps app.</div>
-    <div class="row">
-      <a class="btn primary" id="appleMapsLink" target="_blank" rel="noopener">Apple Maps</a>
-      <a class="btn" id="googleMapsLink" target="_blank" rel="noopener">Google Maps</a>
-    </div>
-    <div class="close-row">
-      <button class="x" onclick="closeDirections()">Close</button>
+<footer>
+  <div class="container footer-row">
+    <div>© <span id="y"></span> Placeholder Barber Lounge</div>
+    <div class="footer-links">
+      <a href="book.html">Book</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
-</div>
+</footer>
 
-<script src="script.js"></script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+  const btn = document.getElementById("menuBtn");
+  const nav = document.getElementById("nav");
+  btn.addEventListener("click", () => nav.classList.toggle("open"));
+</script>
 </body>
 </html>
