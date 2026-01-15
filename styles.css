@@ -525,3 +525,4 @@ footer{
   color: rgba(255,255,255,.85) !important;
 }
 }
+body{ outline: 6px solid lime !important; }
