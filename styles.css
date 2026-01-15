@@ -525,4 +525,81 @@ footer{
   color: rgba(255,255,255,.85) !important;
 }
 }
-body{ outline: 6px solid lime !important; }
+/* ===== FORCE hero to NOT look boxed ===== */
+
+/* kill any card/panel styling inside hero */
+.hero .card,
+.hero .hero-overlay,
+.hero .hero-left,
+.hero .hero-center,
+.hero .hero-content {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* remove padding that makes it feel like a panel */
+.hero .card.hero-left.hero-overlay{
+  padding: 0 !important;
+}
+
+/* if there's a border-radius clipping layer */
+.hero .card,
+.hero .hero-overlay{
+  border-radius: 0 !important;
+}
+
+/* keep text readable without a box */
+.hero h1{
+  text-shadow: 0 10px 30px rgba(0,0,0,.55);
+}
+
+.hero .lead{
+  color: rgba(255,255,255,.78);
+  text-shadow: 0 8px 24px rgba(0,0,0,.45);
+  max-width: 60ch;
+}
+
+/* make buttons look more natural */
+.hero .actions{
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero .btn{
+  border-radius: 999px !important;
+  padding: 12px 18px !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  background: rgba(0,0,0,.18) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25) !important;
+  backdrop-filter: blur(10px);
+}
+
+.hero .btn.primary{
+  background: rgba(255,255,255,.92) !important;
+  color: #000 !important;
+  border-color: rgba(255,255,255,.40) !important;
+}
+
+.hero .btn:hover{
+  transform: translateY(-1px);
+}
+
+/* chips */
+.hero .badge-row{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero .badge{
+  background: rgba(0,0,0,.16) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  border-radius: 999px !important;
+  padding: 8px 12px !important;
+  box-shadow: none !important;
+  color: rgba(255,255,255,.85) !important;
+}
