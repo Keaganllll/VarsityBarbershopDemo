@@ -615,3 +615,27 @@ footer{
     max-width:380px !important;
   }
 }
+/* Premium CTA polish */
+.hero-links a,
+.hero-links button{
+  backdrop-filter: blur(6px);
+}
+
+.hero-links a:hover,
+.hero-links button:hover{
+  background: rgba(255,255,255,0.16) !important;
+}
+/* Space hero content like PrimeTime */
+.hero h1{
+  margin-bottom: 18px !important;
+}
+
+.hero .lead{
+  margin-bottom: 22px !important;
+  max-width: 720px;
+}
+/* PrimeTime-style headline feel */
+.hero h1{
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
