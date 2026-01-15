@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact • PLACEHOLDER BARBER LOUNGE</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="name">PLACEHOLDER BARBER LOUNGE</div>
+      <div class="sub">Luxury Cuts • City, State</div>
+    </div>
+    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">Menu</button>
+    <nav id="siteNav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="book.html">Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="container">
+      <div class="kicker">Contact</div>
+      <h1>Say Hello</h1>
+
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="card pad">
+          <h3>Phone</h3>
+          <p class="small">(316) 555-1234</p>
+          <div class="actions" style="margin-top:10px;">
+            <a class="btn primary" href="tel:+13165551234">Call Now</a>
+            <a class="btn" href="book.html">Book</a>
+          </div>
+
+          <div class="hr"></div>
+          <h3>Address</h3>
+          <p class="small">123 Luxury Ave, Suite 100<br>City, ST 00000</p>
+
+          <div class="actions" style="margin-top:10px;">
+            <button class="btn primary" onclick="openDirections('123 Luxury Ave, Suite 100, City, ST')">Get Directions</button>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h3>Quick Message</h3>
+          <p class="small">
+            Demo form (replace later with Formspree / Netlify Forms).
+          </p>
+          <div class="hr"></div>
+          <p class="small">
+            For now, just link them to Instagram or email:
+          </p>
+          <div class="actions" style="margin-top:10px;">
+            <a class="btn" target="_blank" rel="noopener" href="https://instagram.com/">Instagram</a>
+            <a class="btn" href="mailto:hello@yourdomain.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- MAP MODAL -->
+<div class="modal-backdrop" id="mapModalBackdrop" onclick="if(event.target.id==='mapModalBackdrop') closeDirections()">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Open directions">
+    <div class="kicker">Directions</div>
+    <h3>Open in Maps</h3>
+    <div class="small">Choose your preferred maps app.</div>
+    <div class="row">
+      <a class="btn primary" id="appleMapsLink" target="_blank" rel="noopener">Apple Maps</a>
+      <a class="btn" id="googleMapsLink" target="_blank" rel="noopener">Google Maps</a>
+    </div>
+    <div class="close-row">
+      <button class="x" onclick="closeDirections()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
