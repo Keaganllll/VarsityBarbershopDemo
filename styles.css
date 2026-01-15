@@ -603,3 +603,59 @@ footer{
   box-shadow: none !important;
   color: rgba(255,255,255,.85) !important;
 }
+/* ===== HERO: plain white text + simple links ===== */
+
+/* remove chips/badges row if it's still showing */
+.hero .badge-row,
+.hero .badge {
+  display: none !important;
+}
+
+/* title look */
+.hero .shop-title{
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.05;
+  margin: 0;
+  color: #fff;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  text-shadow: 0 14px 40px rgba(0,0,0,.6);
+}
+
+.hero .shop-sub{
+  margin: 10px 0 0;
+  color: rgba(255,255,255,.8);
+  font-size: 1.05rem;
+  text-shadow: 0 10px 30px rgba(0,0,0,.55);
+}
+
+/* kill any leftover lead text/kicker if still present */
+.hero .kicker,
+.hero .lead{
+  display: none !important;
+}
+
+/* plain link row */
+.hero .hero-links{
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.hero .hero-links a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: .02em;
+  padding: 0;               /* no bubble */
+  border: 0;                /* no bubble */
+  background: transparent;  /* no bubble */
+  box-shadow: none;         /* no bubble */
+  text-shadow: 0 10px 28px rgba(0,0,0,.55);
+}
+
+.hero .hero-links a:hover{
+  text-decoration: underline;
+  opacity: .9;
+}
