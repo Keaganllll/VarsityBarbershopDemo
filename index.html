@@ -1,194 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Placeholder Barber Lounge</title>
-
-  <!-- IMPORTANT: cache-buster so changes show immediately -->
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <div class="brand-name">PLACEHOLDER BARBER LOUNGE</div>
-        <div class="brand-sub">Luxury Cuts • City, State</div>
-      </a>
 
-      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="nav-link active" href="index.html">Home</a>
-        <a class="nav-link" href="services.html">Services</a>
-        <a class="nav-link" href="gallery.html">Gallery</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="book.html">Book</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-      </nav>
+<header>
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="name">PLACEHOLDER BARBER LOUNGE</div>
+      <div class="tag">Luxury Cuts • City, State</div>
     </div>
-  </header>
 
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+      ☰ <span>Menu</span>
+    </button>
+
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="book.html">Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
   <!-- HERO -->
-  <main>
-    <section class="hero" aria-label="Hero">
-      <!-- Put your background image file in the SAME folder and name it hero.jpg -->
-      <div class="hero-bg" role="img" aria-label="Barbershop hero background"></div>
-      <div class="hero-overlay"></div>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="kicker">Premium grooming experience</div>
 
-      <div class="container hero-content">
-        <div class="hero-text">
-          <div class="hero-kicker">Welcome to</div>
+      <h1>WELCOME TO PLACEHOLDER<br/>BARBER LOUNGE</h1>
 
-          <!-- CHANGE THIS NAME WHEN YOU PICK A SHOP -->
-          <h1 class="hero-title">PLACEHOLDER BARBER LOUNGE</h1>
+      <div class="subline">City, State</div>
 
-          <div class="hero-meta">City, State</div>
-
-          <!-- Text links (NOT bubbles) -->
-          <div class="hero-actions" role="navigation" aria-label="Hero actions">
-            <a class="hero-action" href="book.html">Book Appointment</a>
-            <span class="divider">|</span>
-            <a class="hero-action" href="tel:+13165551234">Call</a>
-            <span class="divider">|</span>
-            <button class="hero-action button-link" type="button"
-              onclick="openDirections('123 Luxury Ave, Suite 100, City, ST')">
-              Get Directions
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="scroll-hint" aria-hidden="true">
-        <span class="line"></span>
-        <span class="text">Scroll</span>
-      </div>
-    </section>
-
-    <!-- FEATURED -->
-    <section class="section">
-      <div class="container">
-        <div class="section-kicker">Featured Work</div>
-        <h2 class="section-title">Clean finishes. Sharp details.</h2>
-
-        <div class="grid-3">
-          <div class="img-card" style="background-image:url('https://images.unsplash.com/photo-1520975958225-113c6f8bbd85?auto=format&fit=crop&w=1200&q=60');"></div>
-          <div class="img-card" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=60');"></div>
-          <div class="img-card" style="background-image:url('https://images.unsplash.com/photo-1517838277536-f5f99be50125?auto=format&fit=crop&w=1200&q=60');"></div>
-        </div>
-
-        <p class="muted top-space">
-          Swap these images later with the shop’s real photos.
-        </p>
-      </div>
-    </section>
-
-    <!-- WHY -->
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-kicker">Why choose us</div>
-        <h2 class="section-title">Luxury service, consistent results.</h2>
-
-        <div class="grid-3 cards">
-          <div class="card">
-            <h3>Premium experience</h3>
-            <p>Clean atmosphere, attention to detail, and a sharp finish every time.</p>
-          </div>
-          <div class="card">
-            <h3>Easy booking</h3>
-            <p>Fast online booking and clear communication for a smooth visit.</p>
-          </div>
-          <div class="card">
-            <h3>Professional barbers</h3>
-            <p>Skilled cuts, fades, tapers, beard work, and modern styling.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOCATION -->
-    <section class="section">
-      <div class="container">
-        <div class="section-kicker">Visit</div>
-        <h2 class="section-title">Location & hours</h2>
-
-        <div class="grid-2 cards">
-          <div class="card">
-            <h3>Address</h3>
-            <p class="mono">
-              123 Luxury Ave<br />
-              Suite 100<br />
-              City, ST
-            </p>
-
-            <div class="inline-actions">
-              <a class="text-link" href="tel:+13165551234">Call</a>
-              <span class="dot">•</span>
-              <button class="text-link button-link" type="button"
-                onclick="openDirections('123 Luxury Ave, Suite 100, City, ST')">
-                Get Directions
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Hours</h3>
-            <p class="mono">
-              Mon–Fri: 10am–7pm<br />
-              Sat: 10am–5pm<br />
-              Sun: Closed
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="y"></span> Placeholder Barber Lounge</div>
-      <div class="footer-links">
-        <a href="book.html">Book</a>
-        <a href="contact.html">Contact</a>
+      <div class="hero-links">
+        <a href="book.html">Book Appointment</a>
+        <a href="contact.html">Call</a>
+        <button type="button" onclick="openDirections('123 Luxury Ave, Suite 100, City, ST')">Get Directions</button>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // year
-    document.getElementById('y').textContent = new Date().getFullYear();
+  <!-- Featured -->
+  <section class="section">
+    <div class="container">
+      <div class="kicker">Featured work</div>
+      <h2 style="margin-top:10px; font-size: clamp(1.5rem, 2.8vw, 2.2rem); letter-spacing:.04em;">
+        Clean finishes. Sharp details.
+      </h2>
 
-    // Apple Maps on iPhone/iPad/Mac Safari, Google Maps everywhere else
-    function openDirections(address) {
-      const encoded = encodeURIComponent(address);
+      <div style="height:16px"></div>
 
-      const ua = navigator.userAgent || "";
-      const isAppleDevice = /iPhone|iPad|iPod|Macintosh/.test(ua);
+      <div class="gallery">
+        <!-- Replace these with real haircut photos later -->
+        <div class="img"><img src="assets/demo1.jpg" alt="Demo haircut 1"></div>
+        <div class="img"><img src="assets/demo2.jpg" alt="Demo haircut 2"></div>
+        <div class="img"><img src="assets/demo3.jpg" alt="Demo haircut 3"></div>
+      </div>
+    </div>
+  </section>
 
-      // iOS prefers maps://
-      // macOS Safari will open Apple Maps via maps.apple.com
-      if (/iPhone|iPad|iPod/.test(ua)) {
-        window.location.href = `maps://?q=${encoded}`;
-      } else if (isAppleDevice) {
-        window.open(`https://maps.apple.com/?q=${encoded}`, "_blank");
-      } else {
-        window.open(`https://www.google.com/maps/search/?api=1&query=${encoded}`, "_blank");
-      }
+  <!-- Why -->
+  <section class="section small">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card">
+          <h3>Luxury feel</h3>
+          <p>Clean shop vibe, consistent results, and attention to detail in every cut.</p>
+        </div>
+        <div class="card">
+          <h3>Easy booking</h3>
+          <p>Book in seconds from your phone. Quick confirmations and smooth scheduling.</p>
+        </div>
+        <div class="card">
+          <h3>Sharp results</h3>
+          <p>Fades, tapers, lineups, and beard work — finished clean and precise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>© <span id="y"></span> Placeholder Barber Lounge</div>
+    <div class="footer-links">
+      <a href="book.html">Book</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // mobile menu
+  const btn = document.getElementById("menuBtn");
+  const nav = document.getElementById("nav");
+  btn.addEventListener("click", () => nav.classList.toggle("open"));
+
+  // Directions: Apple Maps on iPhone/iPad, Google Maps otherwise
+  function openDirections(address){
+    const encoded = encodeURIComponent(address);
+    const isApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if(isApple){
+      window.location.href = `maps://?q=${encoded}`;
+    } else {
+      window.open(`https://www.google.com/maps/search/?api=1&query=${encoded}`, "_blank");
     }
+  }
+</script>
 
-    // Simple mobile menu toggle
-    const btn = document.querySelector('.menu-btn');
-    const nav = document.querySelector('.site-nav');
-
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  </script>
 </body>
 </html>
