@@ -352,3 +352,68 @@ footer{
   border-radius:10px;
 }
 .footer-links a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+/* =========================
+   PRIME-TIME STYLE HERO TITLE
+   Paste at VERY BOTTOM
+========================= */
+
+/* Center hero like PrimeTime */
+.hero .hero-inner{
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Make the big title look like PrimeTime */
+.hero h1{
+  font-weight: 600;                 /* not super bold */
+  letter-spacing: 0.28em;           /* wide tracking */
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-size: clamp(2rem, 4.6vw, 3.9rem);
+  margin-top: 14px;
+  margin-bottom: 22px;
+  color: rgba(255,255,255,0.88);
+  text-shadow: 0 22px 70px rgba(0,0,0,0.55);
+}
+
+/* If your h1 is split with <br>, this helps spacing */
+.hero h1 br{
+  line-height: 1.2;
+}
+
+/* Make hero links sit nicely under title */
+.hero .hero-links{
+  justify-content: center;
+  gap: 34px;                        /* more spaced out */
+  margin-top: 10px;
+}
+
+/* Hero links more subtle like PrimeTime */
+.hero .hero-links a,
+.hero .hero-links button{
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  font-weight: 400;
+  color: rgba(255,255,255,0.82);
+  text-transform: uppercase;
+}
+
+/* Underline hover like PrimeTime */
+.hero .hero-links a::after,
+.hero .hero-links button::after{
+  height: 1px;
+  background: rgba(255,255,255,0.7);
+}
+
+/* Mobile: keep it centered but stack links */
+@media (max-width: 700px){
+  .hero .hero-inner{ text-align: left; }     /* PrimeTime feels left-ish on phone */
+  .hero h1{ letter-spacing: 0.18em; }
+  .hero .hero-links{
+    justify-content: flex-start;
+    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
