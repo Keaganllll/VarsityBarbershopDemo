@@ -144,3 +144,28 @@
 
 </body>
 </html>
+/* --- About page action buttons spacing fix --- */
+.hero-links{
+  display: flex;
+  gap: 28px;              /* MORE SPACE between buttons */
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.hero-links a,
+.hero-links button{
+  padding: 12px 18px;     /* slightly bigger click area */
+}
+
+/* Mobile spacing */
+@media (max-width: 700px){
+  .hero-links{
+    flex-direction: column;
+    gap: 16px;            /* clean vertical spacing on phone */
+  }
+
+  .hero-links a,
+  .hero-links button{
+    width: fit-content;
+  }
+}
