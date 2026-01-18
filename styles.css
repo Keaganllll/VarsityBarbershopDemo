@@ -437,3 +437,16 @@ footer{
 /* Hide broken booking embed */
 .embed { display: none !important; }
 .embed-note { display: none !important; }
+/* Fix About page action buttons */
+.hero-links button,
+.hero-links a {
+  color: rgba(255,255,255,0.9) !important;
+  cursor: pointer;
+}
+
+/* Make About page buttons look clickable */
+.hero-links button {
+  background: transparent;
+  border: none;
+  font: inherit;
+}
