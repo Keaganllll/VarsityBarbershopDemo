@@ -434,3 +434,6 @@ footer{
   body{padding-bottom:90px}
   .sticky-bar{display:flex}
 }
+/* Hide broken booking embed */
+.embed { display: none !important; }
+.embed-note { display: none !important; }
